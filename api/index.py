@@ -5,7 +5,7 @@ from openai import OpenAI  # type: ignore
 app = FastAPI()
 
 
-@app.get("/", response_class=PlainTextResponse)
+@app.get("/api", response_class=PlainTextResponse)
 def idea():
     client = OpenAI()
     prompt = [
