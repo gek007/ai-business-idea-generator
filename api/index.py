@@ -16,19 +16,21 @@ clerk_guard = ClerkHTTPBearer(clerk_config)
 
 
 @app.get("/api")
-def idea(creds: HTTPAuthorizationCredentials = Depends(clerk_guard)):
+def idea(
+    industry: str = "AI agents",
+    creds: HTTPAuthorizationCredentials = Depends(clerk_guard),
+):
     user_id = creds.decoded["sub"]  # User ID from JWT - available for future use
-    # We now know which user is making the request!
-    # You could use user_id to:
-    # - Track usage per user
-    # - Store generated ideas in a database
-    # - Apply user-specific limits or customization
 
     client = OpenAI()
     prompt = [
         {
             "role": "user",
-            "content": "Reply with a new business idea for AI Agents, formatted with headings, sub-headings and bullet points",
+            "content": (
+                f"Reply with a new business idea for the {industry} industry, "
+                "focusing on AI Agent opportunities. "
+                "Format your response with headings, sub-headings and bullet points."
+            ),
         }
     ]
     stream = client.chat.completions.create(
