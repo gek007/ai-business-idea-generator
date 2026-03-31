@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(vercel --prod)",
-      "Bash(vercel env:*)"
+      "Bash(vercel env:*)",
+      "Bash(gh pr:*)"
     ]
   }
 }
