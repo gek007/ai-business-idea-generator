@@ -1,5 +1,6 @@
 import os
 
+from dotenv import load_dotenv  # type: ignore
 from fastapi import Depends, FastAPI  # type: ignore
 from fastapi.responses import StreamingResponse  # type: ignore
 from fastapi_clerk_auth import (  # type: ignore
@@ -9,6 +10,8 @@ from fastapi_clerk_auth import (  # type: ignore
 )
 from openai import OpenAI  # type: ignore
 from pydantic import BaseModel  # type: ignore
+
+load_dotenv(".env.local")
 
 app = FastAPI()
 clerk_config = ClerkConfig(jwks_url=os.getenv("CLERK_JWKS_URL"))
