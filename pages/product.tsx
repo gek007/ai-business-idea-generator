@@ -1,5 +1,3 @@
-"use client"
-
 import Link from 'next/link';
 import { PricingTable, Protect, useAuth, UserButton } from '@clerk/nextjs';
 import { fetchEventSource } from '@microsoft/fetch-event-source';

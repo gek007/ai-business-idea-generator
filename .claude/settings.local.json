@@ -10,7 +10,11 @@
       "Bash(git push:*)",
       "mcp__Claude_Preview__preview_start",
       "Bash(ls G:/__VSCode/Ed_Donner_Production/healthcare-ai-assistant/node_modules/next/document*)",
-      "Bash(ls G:/__VSCode/Ed_Donner_Production/healthcare-ai-assistant/node_modules/next/dist/pages/_document*)"
+      "Bash(ls G:/__VSCode/Ed_Donner_Production/healthcare-ai-assistant/node_modules/next/dist/pages/_document*)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :3000)",
+      "Bash(findstr LISTENING)",
+      "Bash(taskkill /PID 16752 /F)"
     ]
   }
 }

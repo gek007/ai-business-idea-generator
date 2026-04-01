@@ -3,9 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactCompiler: true,
   reactStrictMode: true,
-  turbopack: {
-    root: process.cwd(),
-  },
+  devIndicators: false,
   async rewrites() {
     if (process.env.NODE_ENV === "production") return [];
     return [
