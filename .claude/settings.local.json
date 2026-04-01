@@ -3,7 +3,14 @@
     "allow": [
       "Bash(vercel --prod)",
       "Bash(vercel env:*)",
-      "Bash(gh pr:*)"
+      "Bash(gh pr:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(ls G:/__VSCode/Ed_Donner_Production/healthcare-ai-assistant/node_modules/next/document*)",
+      "Bash(ls G:/__VSCode/Ed_Donner_Production/healthcare-ai-assistant/node_modules/next/dist/pages/_document*)"
     ]
   }
 }
