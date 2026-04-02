@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { PricingTable, Protect, useAuth, UserButton } from '@clerk/nextjs';
 import { fetchEventSource } from '@microsoft/fetch-event-source';
+import Link from 'next/link';
 import { FormEvent, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import ReactMarkdown from 'react-markdown';
@@ -42,7 +42,7 @@ function ConsultationForm() {
         const controller = new AbortController();
         let buffer = '';
 
-        await fetchEventSource('/api', {
+        await fetchEventSource('/api/consultation', {
             signal: controller.signal,
             method: 'POST',
             headers: {
